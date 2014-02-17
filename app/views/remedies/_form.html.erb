@@ -1,0 +1,25 @@
+<%= form_for(@remedy) do |f| %>
+  <% if @remedy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@remedy.errors.count, "error") %> prohibited this remedy from being saved:</h2>
+
+      <ul>
+      <% @remedy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ailment %><br>
+    <%= f.text_field :ailment %>
+  </div>
+  <div class="field">
+    <%= f.label :cure %><br>
+    <%= f.text_field :cure %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

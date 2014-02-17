@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ailment:</strong>
+  <%= @remedy.ailment %>
+</p>
+
+<p>
+  <strong>Cure:</strong>
+  <%= @remedy.cure %>
+</p>
+
+<%= link_to 'Edit', edit_remedy_path(@remedy) %> |
+<%= link_to 'Back', remedies_path %>
