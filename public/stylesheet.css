@@ -7,8 +7,17 @@
 	height: 40px;
 }
 
-h1 {
+hr {
+    color: ccc;
+    width: 85%;
+    text-align: center;
+}
+
+h1, h2 {
     font-family: Lobster;
+}
+
+h1 {
     color: #FFFFFF;
     text-align: center;
 }
