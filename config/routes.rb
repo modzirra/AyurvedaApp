@@ -15,4 +15,6 @@ AyurvedaApp::Application.routes.draw do
 
   resources :ailments
 
+  root to: 'welcome#index'
+
 end
