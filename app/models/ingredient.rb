@@ -8,4 +8,12 @@ class Ingredient < ActiveRecord::Base
 	has_many :post_flavors
 	has_many :dosha_actions
 	has_many :properties
+
+	scope :heating, -> do
+		where(temperature: 'Heating')
+	end
+
+	scope :cooling, -> do
+		where(temperature: 'Cooling')
+	end
 end
