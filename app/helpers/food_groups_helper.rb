@@ -1,0 +1,2 @@
+module FoodGroupsHelper
+end

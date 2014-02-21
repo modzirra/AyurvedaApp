@@ -1,0 +1,25 @@
+<%= form_for(@dosha_action) do |f| %>
+  <% if @dosha_action.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dosha_action.errors.count, "error") %> prohibited this dosha_action from being saved:</h2>
+
+      <ul>
+      <% @dosha_action.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Dosha %><br>
+    <%= f.text_field :Dosha %>
+  </div>
+  <div class="field">
+    <%= f.label :Movement %><br>
+    <%= f.text_field :Movement %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

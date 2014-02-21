@@ -1,0 +1,29 @@
+<h1>Listing dosha_actions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dosha</th>
+      <th>Movement</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dosha_actions.each do |dosha_action| %>
+      <tr>
+        <td><%= dosha_action.Dosha %></td>
+        <td><%= dosha_action.Movement %></td>
+        <td><%= link_to 'Show', dosha_action %></td>
+        <td><%= link_to 'Edit', edit_dosha_action_path(dosha_action) %></td>
+        <td><%= link_to 'Destroy', dosha_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dosha action', new_dosha_action_path %>

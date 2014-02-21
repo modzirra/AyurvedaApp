@@ -1,0 +1,27 @@
+<h1>Listing post_flavors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @post_flavors.each do |post_flavor| %>
+      <tr>
+        <td><%= post_flavor.Name %></td>
+        <td><%= link_to 'Show', post_flavor %></td>
+        <td><%= link_to 'Edit', edit_post_flavor_path(post_flavor) %></td>
+        <td><%= link_to 'Destroy', post_flavor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post flavor', new_post_flavor_path %>

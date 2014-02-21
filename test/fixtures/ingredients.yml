@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  Type: MyString
+  Temperature: MyString
+  PreFlavor: MyString
+  PostFlavor: MyString
+  Property: MyString
+  Dosha_Action: MyString
+
+two:
+  Name: MyString
+  Type: MyString
+  Temperature: MyString
+  PreFlavor: MyString
+  PostFlavor: MyString
+  Property: MyString
+  Dosha_Action: MyString

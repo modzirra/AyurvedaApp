@@ -1,0 +1,27 @@
+<h1>Listing pre_flavors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pre_flavors.each do |pre_flavor| %>
+      <tr>
+        <td><%= pre_flavor.Name %></td>
+        <td><%= link_to 'Show', pre_flavor %></td>
+        <td><%= link_to 'Edit', edit_pre_flavor_path(pre_flavor) %></td>
+        <td><%= link_to 'Destroy', pre_flavor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pre flavor', new_pre_flavor_path %>

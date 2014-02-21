@@ -1,0 +1,21 @@
+<%= form_for(@pre_flavor) do |f| %>
+  <% if @pre_flavor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pre_flavor.errors.count, "error") %> prohibited this pre_flavor from being saved:</h2>
+
+      <ul>
+      <% @pre_flavor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %><br>
+    <%= f.text_field :Name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

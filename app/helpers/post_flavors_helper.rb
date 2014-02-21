@@ -1,0 +1,2 @@
+module PostFlavorsHelper
+end

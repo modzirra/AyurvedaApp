@@ -1,0 +1,27 @@
+<h1>Listing food_groups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @food_groups.each do |food_group| %>
+      <tr>
+        <td><%= food_group.Name %></td>
+        <td><%= link_to 'Show', food_group %></td>
+        <td><%= link_to 'Edit', edit_food_group_path(food_group) %></td>
+        <td><%= link_to 'Destroy', food_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Food group', new_food_group_path %>

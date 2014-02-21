@@ -11,11 +11,67 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217232137) do
+ActiveRecord::Schema.define(version: 20140221163224) do
+
+  create_table "ailments", force: true do |t|
+    t.string   "Name"
+    t.string   "Remedy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dosha_actions", force: true do |t|
+    t.string   "Dosha"
+    t.string   "Movement"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "food_groups", force: true do |t|
+    t.string   "Name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ingredients", force: true do |t|
+    t.string   "Name"
+    t.string   "Type"
+    t.string   "Temperature"
+    t.string   "PreFlavor"
+    t.string   "PostFlavor"
+    t.string   "Property"
+    t.string   "Dosha_Action"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "post_flavors", force: true do |t|
+    t.string   "Name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pre_flavors", force: true do |t|
+    t.string   "Name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "properties", force: true do |t|
+    t.string   "Name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "remedies", force: true do |t|
     t.string   "ailment"
     t.string   "cure"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "temperatures", force: true do |t|
+    t.string   "Type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

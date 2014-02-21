@@ -1,0 +1,29 @@
+<h1>Listing ailments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Remedy</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ailments.each do |ailment| %>
+      <tr>
+        <td><%= ailment.Name %></td>
+        <td><%= ailment.Remedy %></td>
+        <td><%= link_to 'Show', ailment %></td>
+        <td><%= link_to 'Edit', edit_ailment_path(ailment) %></td>
+        <td><%= link_to 'Destroy', ailment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ailment', new_ailment_path %>

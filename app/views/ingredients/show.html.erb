@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ingredient.Name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @ingredient.Type %>
+</p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @ingredient.Temperature %>
+</p>
+
+<p>
+  <strong>Preflavor:</strong>
+  <%= @ingredient.PreFlavor %>
+</p>
+
+<p>
+  <strong>Postflavor:</strong>
+  <%= @ingredient.PostFlavor %>
+</p>
+
+<p>
+  <strong>Property:</strong>
+  <%= @ingredient.Property %>
+</p>
+
+<p>
+  <strong>Dosha action:</strong>
+  <%= @ingredient.Dosha_Action %>
+</p>
+
+<%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
+<%= link_to 'Back', ingredients_path %>
