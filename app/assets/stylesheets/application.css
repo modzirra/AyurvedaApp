@@ -11,3 +11,90 @@
  *= require_self
  *= require_tree .
  */
+ 
+#header {
+  position: relative;
+  top: -10px;
+  background-color: #00A0B0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 40px;
+}
+
+hr {
+    color: ccc;
+    width: 85%;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: Lobster;
+}
+
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+p {
+    font-family: Verdana, Arial, sans-serif;
+    display: inline-block;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    color: #00A0B0;
+    margin: 0 2% 0 2%;
+}
+
+a {
+    text-decoration: none;
+    background-color: none;
+}
+
+a:visited {
+  color: #00A0B0;
+}
+
+a:link {
+  color: #00A0B0;
+}
+
+a:visited {
+  color: #00A0B0;
+}
+
+a:hover {
+  background-color: #FFF;
+}
+
+#wrapper {
+    border-left: 1px solid #888;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+    position: relative;
+    top: -10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    box-shadow: 3px 3px 3px #444;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 0.8em;
+}

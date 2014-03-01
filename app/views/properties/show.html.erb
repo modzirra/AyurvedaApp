@@ -4,6 +4,17 @@
   <strong>Name:</strong>
   <%= @property.Name %>
 </p>
-
+<p>
+	<strong>Increases:</strong>
+	<%= @property.increases %>
+</p>
+<p>
+	<strong>Decreases:</strong>
+	<%= @property.decreases %>
+</p>
+<p>
+	<strong>Effects:</strong>
+	<%= @property.effects %>
+</p>
 <%= link_to 'Edit', edit_property_path(@property) %> |
 <%= link_to 'Back', properties_path %>

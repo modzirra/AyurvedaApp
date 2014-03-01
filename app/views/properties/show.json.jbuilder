@@ -1,1 +1,1 @@
-json.extract! @property, :id, :Name, :created_at, :updated_at
+json.extract! @property, :id, :Name, :increases, :decreases, :effects, :created_at, :updated_at

@@ -1,9 +1,13 @@
-<h1>Listing properties</h1>
+<div id="header"><h1>Properties</h1></div>
+<div id="wrapper">
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
+      <th>Increases</th>
+      <th>Decreases</th>
+      <th>Effects</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,6 +18,9 @@
     <% @properties.each do |property| %>
       <tr>
         <td><%= property.Name %></td>
+        <td><%= property.increases %></td>
+        <td><%= property.decreases %></td>
+        <td><%= property.effects %></td>
         <td><%= link_to 'Show', property %></td>
         <td><%= link_to 'Edit', edit_property_path(property) %></td>
         <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,3 +32,4 @@
 <br>
 
 <%= link_to 'New Property', new_property_path %>
+</div>
