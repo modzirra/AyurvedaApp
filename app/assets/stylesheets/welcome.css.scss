@@ -1,3 +1,23 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#dosha_desc_wrap {
+	width: 100%;
+	margin: 0 6% 0 6%;
+}
+
+.dosha_desc {
+	width: 28%;
+	display: inline-block;
+	background-color: #eee;
+	margin: auto;
+	padding: 0 8px 0 8px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.dosha_desc h3 {
+	text-align: center;
+}
