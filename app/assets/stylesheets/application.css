@@ -11,16 +11,7 @@
  *= require_self
  *= require_tree .
  */
- 
-#header {
-  position: relative;
-  top: -10px;
-  background-color: #00A0B0;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  height: 40px;
-}
-
+ /* Base Elements */
 hr {
     color: ccc;
     width: 85%;
@@ -54,6 +45,7 @@ img {
     margin-right: auto;
 }
 
+/* Lists */
 ul {
     list-style-type: none;
 }
@@ -64,37 +56,58 @@ li {
     margin: 0 2% 0 2%;
 }
 
+/* Links */
+
 a {
     text-decoration: none;
     background-color: none;
-}
-
-a:visited {
-  color: #00A0B0;
-}
-
-a:link {
-  color: #00A0B0;
-}
-
-a:visited {
-  color: #00A0B0;
+    color: #00A0B0;
 }
 
 a:hover {
   background-color: #FFF;
 }
 
+#wrapper a{
+  font-size: 1em;
+  padding: 8px;
+  background-color: #eee;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#wrapper a:hover {
+  background-color: #fff;
+  color: #ddd;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  margin: auto;
+  font-size: 1em;
+}
+
+th {
+  font-size: 1.2em;
+}
+
+/* Architecture */
+#header {
+  position: relative;
+  top: -10px;
+  background-color: #00A0B0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 40px;
+}
+
 #wrapper {
-    border-left: 1px solid #888;
-    border-right: 1px solid #888;
-    border-bottom: 1px solid #888;
-    position: relative;
-    top: -10px;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    box-shadow: 3px 3px 3px #444;
-    font-family: Verdana, Arial, sans-serif;
-    font-size: 0.8em;
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #888;
+  position: relative;
+  top: -10px;
+  padding: 10px 0 20px 20px;
+  font-family: Verdana, Arial, sans-serif;
 }
