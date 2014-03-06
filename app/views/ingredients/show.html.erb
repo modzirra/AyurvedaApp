@@ -26,10 +26,11 @@
 </p>
 
 <p>
-  <strong>Property:</strong>
-  <%= @ingredient.Property %>
+  <strong>Properties:</strong>
+  <% @ingredient.properties.each do |property| %>
+  <%= property.Name %>&nbsp;
+  <% end %>
 </p>
-
 <p>
   <strong>Dosha action:</strong>
   <%= @ingredient.Dosha_Action %>

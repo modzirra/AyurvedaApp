@@ -32,8 +32,10 @@
     <%= f.text_field :PostFlavor %>
   </div>
   <div class="field">
-    <%= f.label :Property %><br>
-    <%= f.text_field :Property %>
+    <%= f.label :Properties %><br>
+    <%= f.collection_select( :property_ids, 
+      Property.all, 
+      :id, :Name, {selected: @ingredient.property_ids, include_blank: false}, {multiple: true}) %>
   </div>
   <div class="field">
     <%= f.label :Dosha_Action %><br>
