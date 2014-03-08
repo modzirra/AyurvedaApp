@@ -28,8 +28,10 @@
     <%= f.text_field :PreFlavor %>
   </div>
   <div class="field">
-    <%= f.label :PostFlavor %><br>
-    <%= f.text_field :PostFlavor %>
+    <%= f.label :PostFlavors %><br>
+    <%= f.collection_select( :post_flavor_ids, 
+      PostFlavor.all, 
+      :id, :Name, {selected: @ingredient.post_flavor_ids, include_blank: false}, {multiple: true}) %>
   </div>
   <div class="field">
     <%= f.label :Properties %><br>
