@@ -1,3 +1,5 @@
+<div id="header"><h1>Ingredients</h1></div>
+<div id="wrapper">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -16,13 +18,17 @@
 </p>
 
 <p>
-  <strong>Preflavor:</strong>
-  <%= @ingredient.PreFlavor %>
+  <strong>Pre Flavor:</strong>
+  <% @ingredient.flavors.each do |preflavor| %>
+  <%= preflavor.name %>&nbsp;
+  <% end %>
 </p>
 
 <p>
-  <strong>Postflavor:</strong>
-  <%= @ingredient.PostFlavor %>
+  <strong>Post Flavor:</strong>
+  <% @ingredient.flavors.each do |postflavor| %>
+  <%= postflavor.name %>&nbsp;
+  <% end %>
 </p>
 
 <p>
@@ -38,3 +44,4 @@
 
 <%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
 <%= link_to 'Back', ingredients_path %>
+</div>

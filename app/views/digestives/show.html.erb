@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ingredient:</strong>
+  <%= @digestive.ingredient_id %>
+</p>
+
+<p>
+  <strong>Flavor:</strong>
+  <%= @digestive.flavor_id %>
+</p>
+
+<%= link_to 'Edit', edit_digestive_path(@digestive) %> |
+<%= link_to 'Back', digestives_path %>

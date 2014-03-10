@@ -1,4 +1,6 @@
-<%= form_for(@temperature) do |f| %>
+<div id="header"><h1>Temperatures</h1></div>
+<div id="wrapper">
+  <%= form_for(@temperature) do |f| %>
   <% if @temperature.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@temperature.errors.count, "error") %> prohibited this temperature from being saved:</h2>
@@ -19,3 +21,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>

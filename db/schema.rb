@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140308004601) do
+ActiveRecord::Schema.define(version: 20140310013415) do
 
   create_table "ailments", force: true do |t|
     t.string   "Name"
     t.string   "Remedy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "digestives", force: true do |t|
+    t.integer  "ingredient_id"
+    t.integer  "flavor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,6 +32,14 @@ ActiveRecord::Schema.define(version: 20140308004601) do
     t.string   "Movement"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "flavors", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "flavor_id"
+    t.integer  "ingredient_id"
   end
 
   create_table "food_groups", force: true do |t|
@@ -37,13 +52,12 @@ ActiveRecord::Schema.define(version: 20140308004601) do
     t.string   "Name"
     t.string   "Type"
     t.string   "Temperature"
-    t.string   "PreFlavor"
-    t.string   "PostFlavor"
     t.string   "Dosha_Action"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "property_id"
     t.integer  "post_flavor_id"
+    t.integer  "pre_flavor_id"
   end
 
   create_table "post_flavors", force: true do |t|
@@ -57,6 +71,7 @@ ActiveRecord::Schema.define(version: 20140308004601) do
     t.string   "Name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ingredient_id"
   end
 
   create_table "properties", force: true do |t|

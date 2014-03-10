@@ -1,0 +1,29 @@
+<div id="header"><h1>Listing Flavors</h1></div>
+<div id="wrapper">
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flavors.each do |flavor| %>
+      <tr>
+        <td><%= flavor.name %></td>
+        <td><%= link_to 'Show', flavor %></td>
+        <td><%= link_to 'Edit', edit_flavor_path(flavor) %></td>
+        <td><%= link_to 'Destroy', flavor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flavor', new_flavor_path %>
+</div>

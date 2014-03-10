@@ -7,8 +7,8 @@
       <th>Name</th>
       <th>Type</th>
       <th>Temperature</th>
-      <th>Preflavors</th>
-      <th>Postflavors</th>
+      <th>Pre Flavors</th>
+      <th>Post Flavors</th>
       <th>Dosha Action</th>
       <th>Properties</th>
       <th></th>
@@ -23,10 +23,14 @@
         <td><%= ingredient.Name %></td>
         <td><%= ingredient.Type %></td>
         <td><%= ingredient.Temperature %></td>
-        <td><%= ingredient.PreFlavor %></td>
         <td>
-          <% ingredient.post_flavors.each do |post_flavor| %>
-            <%= post_flavor.Name %>&nbsp;
+          <% ingredient.flavors.each do |pre_flavor| %>
+            <%= pre_flavor.name %>&nbsp;
+            <% end %>
+        </td>
+        <td>
+          <% ingredient.flavors.each do |post_flavor| %>
+            <%= post_flavor.name %>&nbsp;
           <% end %>
         </td>
         <td><%= ingredient.Dosha_Action %></td>

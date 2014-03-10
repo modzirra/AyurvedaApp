@@ -1,0 +1,2 @@
+module DigestivesHelper
+end

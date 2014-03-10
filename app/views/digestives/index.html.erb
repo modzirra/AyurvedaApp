@@ -1,0 +1,29 @@
+<h1>Listing digestives</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ingredient</th>
+      <th>Flavor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @digestives.each do |digestive| %>
+      <tr>
+        <td><%= digestive.ingredient_id %></td>
+        <td><%= digestive.flavor_id %></td>
+        <td><%= link_to 'Show', digestive %></td>
+        <td><%= link_to 'Edit', edit_digestive_path(digestive) %></td>
+        <td><%= link_to 'Destroy', digestive, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Digestive', new_digestive_path %>

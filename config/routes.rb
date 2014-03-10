@@ -1,4 +1,6 @@
 AyurvedaApp::Application.routes.draw do
+  resources :digestives
+  resources :flavors
   resources :dosha_actions
   resources :properties
   resources :temperatures

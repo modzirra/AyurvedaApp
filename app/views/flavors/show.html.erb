@@ -1,0 +1,12 @@
+<div id="header"><h1>Flavors</h1></div>
+<div id="wrapper">
+	<p id="notice"><%= notice %></p>
+
+	<p>
+  		<strong>Name:</strong>
+  		<%= @flavor.name %>
+	</p>
+
+	<%= link_to 'Edit', edit_flavor_path(@flavor) %> |
+	<%= link_to 'Back', flavors_path %>
+</div>

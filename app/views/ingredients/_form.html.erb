@@ -1,3 +1,5 @@
+<div id="header"><h1>Ingredients</h1></div>
+<div id="wrapper">
 <%= form_for(@ingredient) do |f| %>
   <% if @ingredient.errors.any? %>
     <div id="error_explanation">
@@ -24,14 +26,16 @@
     <%= f.text_field :Temperature %>
   </div>
   <div class="field">
-    <%= f.label :PreFlavor %><br>
-    <%= f.text_field :PreFlavor %>
+    <%= f.label :flavors %><br>
+    <%= f.collection_select( :flavor_ids,
+      Flavor.all,
+      :id, :name, {selected: @ingredient.flavor_ids, include_blank: false}, {multiple: true}) %>
   </div>
   <div class="field">
-    <%= f.label :PostFlavors %><br>
-    <%= f.collection_select( :post_flavor_ids, 
-      PostFlavor.all, 
-      :id, :Name, {selected: @ingredient.post_flavor_ids, include_blank: false}, {multiple: true}) %>
+    <%= f.label :flavors %><br>
+    <%= f.collection_select( :flavor_ids,
+      Flavor.all,
+      :id, :name, {selected: @ingredient.flavor_ids, include_blank: false}, {multiple: true}) %>
   </div>
   <div class="field">
     <%= f.label :Properties %><br>
@@ -47,3 +51,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
