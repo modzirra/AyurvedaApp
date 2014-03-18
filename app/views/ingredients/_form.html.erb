@@ -26,16 +26,16 @@
     <%= f.text_field :Temperature %>
   </div>
   <div class="field">
-    <%= f.label :flavors %><br>
+    <%= f.label :Pre_Flavors %><br>
     <%= f.collection_select( :flavor_ids,
       Flavor.all,
-      :id, :name, {selected: @ingredient.flavor_ids, include_blank: false}, {multiple: true}) %>
+      :id, :name, {selected: @ingredient.pre_flavor_ids, include_blank: false}, {multiple: true}) %>
   </div>
   <div class="field">
-    <%= f.label :flavors %><br>
+    <%= f.label :Post_Flavors %><br>
     <%= f.collection_select( :flavor_ids,
       Flavor.all,
-      :id, :name, {selected: @ingredient.flavor_ids, include_blank: false}, {multiple: true}) %>
+      :id, :name, {selected: @ingredient.post_flavor_ids, include_blank: false}, {multiple: true}) %>
   </div>
   <div class="field">
     <%= f.label :Properties %><br>

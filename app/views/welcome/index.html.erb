@@ -11,22 +11,22 @@
         <div id="wrapper">
           <ul>
             <li class="navigation">
-              <h3><a href='http://ayurveda-app.herokuapp.com/ingredients' rel='self' type='link' target='parent'>Ingredients</a><h3>
+              <h3><%= link_to "Ingredients", ingredients_path %><h3>
             </li>
             <li class="navigation">
-              <h3><a href='http://ayurveda-app.herokuapp.com/food_groups' rel='self' type='link' target='new'>Food Groups</a></h3>
+              <h3><a href='<%= food_groups_path %>' rel='self' type='link' target='new'>Food Groups</a></h3>
             </li>
             <li class="navigation">
-              <h3><a href='http://ayurveda-app.herokuapp.com/dosha_actions' rel='self' type='link' target='new'>Dosha Actions</a></h3>
+              <h3><a href='<%= dosha_actions_path %>' rel='self' type='link' target='new'>Dosha Actions</a></h3>
             </li>
             <li class="navigation">
-              <h3><a href='http://ayurveda-app.herokuapp.com/properties' rel='self' type='link' target='new'>Properties</a></h3>
+              <h3><a href='<%= properties_path %>' rel='self' type='link' target='new'>Properties</a></h3>
             </li>
             <li class="navigation">
-              <h3><a href='http://ayurveda-app.herokuapp.com/temperatures' rel='self' type='link' target='new'>Temperatures</a></h3>
+              <h3><a href='<%= temperatures_path %>' rel='self' type='link' target='new'>Temperatures</a></h3>
             </li>
             <li class="navigation">
-              <h3><a href='http://ayurveda-app.herokuapp.com/flavors' rel='self' type='link' target='new'>Flavors</a></h3>
+              <h3><a href='<%= flavors_path %>' rel='self' type='link' target='new'>Flavors</a></h3>
             </li>              
           </ul>
           <hr />

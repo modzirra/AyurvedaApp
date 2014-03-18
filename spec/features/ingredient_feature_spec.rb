@@ -9,13 +9,16 @@ describe Ingredient, type: :feature do
 		end
 
 		it "Should create a new Ingredient" do
+			Property.create Name: 'Dry'
+			
 			visit '/ingredients/new'
 			fill_in 'Name', with: 'test name'
 			fill_in 'Type', with: 'test type'
 			fill_in 'Temperature', with: 'Heating'
+			#puts page.body
 			#select ['Sweet', 'Salty'], from: 'ingredient_flavor_ids'
-			#select('Dry', :from => 'ingredient_property_ids')
-			click_button 'create Ingredient'
+			select('Dry', :from => 'ingredient_property_ids')
+			click_button 'Create Ingredient'
 		end
 	end
 end
