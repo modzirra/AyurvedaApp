@@ -1,10 +1,4 @@
 class Property < ActiveRecord::Base
-	belongs_to :ingredient
-
-	attr_accessor :new_property_name
-  	before_save :create_property_from_name
-
-  def create_property_from_name
-    create_property(:name => new_property_name) unless new_property_name.blank?
-  end
+	has_many :ingredients
+	has_many :ingredients through: :ingredient_property
 end
