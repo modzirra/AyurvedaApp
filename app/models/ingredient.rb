@@ -8,8 +8,8 @@ class Ingredient < ActiveRecord::Base
 	has_many :post_flavors
 	has_many :flavors, through: :post_flavors
 
-	has_many :ingredient_properties
-	has_many :properties, through: :ingredient_properties
+	has_many :ingredientProperties
+	has_many :properties, through: :ingredientProperties
 
 	has_many :dosha_actions
 
