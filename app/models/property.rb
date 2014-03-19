@@ -1,4 +1,4 @@
 class Property < ActiveRecord::Base
-	has_many :ingredients
-	has_many :ingredients through: :ingredient_property
+	has_many :ingredient_properties
+	has_many :ingredients, through: :ingredient_properties
 end

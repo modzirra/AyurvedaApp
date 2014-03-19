@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140319221115) do
+ActiveRecord::Schema.define(version: 20140319222245) do
 
   create_table "ailments", force: true do |t|
     t.string   "Name"
@@ -53,9 +53,9 @@ ActiveRecord::Schema.define(version: 20140319221115) do
     t.string   "Dosha_Action"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "property_id"
     t.integer  "post_flavor_id"
     t.integer  "pre_flavor_id"
+    t.integer  "ingredient_property"
   end
 
   create_table "post_flavors", force: true do |t|
@@ -80,8 +80,8 @@ ActiveRecord::Schema.define(version: 20140319221115) do
     t.datetime "updated_at"
     t.string   "decreases"
     t.string   "effects"
-    t.integer  "ingredient_id"
     t.string   "increases"
+    t.integer  "ingredient_property"
   end
 
   create_table "remedies", force: true do |t|
