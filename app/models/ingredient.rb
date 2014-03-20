@@ -2,11 +2,11 @@ class Ingredient < ActiveRecord::Base
 	has_one :food_group
 	has_one :temperature
 
-	has_many :pre_flavors
-	has_many :flavors, through: :pre_flavors
+	has_many :preFlavors
+	has_many :flavors, through: :preFlavors
 
-	has_many :post_flavors
-	has_many :flavors, through: :post_flavors
+	has_many :postFlavors
+	has_many :flavors, through: :postFlavors
 
 	has_many :ingredientProperties
 	has_many :properties, through: :ingredientProperties
