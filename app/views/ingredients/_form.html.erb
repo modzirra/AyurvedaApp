@@ -27,15 +27,15 @@
   </div>
   <div class="field">
     <%= f.label :PreFlavors %><br>
-    <%= f.collection_select( :preflavor_ids,
+    <%= f.collection_select( :flavor_ids,
       Flavor.all,
-      :id, :name, {selected: @ingredient.preFlavor_ids, include_blank: false}, {multiple: true}) %>
+      :id, :name, {selected: @ingredient.flavor_ids, include_blank: false}, {multiple: true}) %>
   </div>
   <div class="field">
     <%= f.label :PostFlavors %><br>
-    <%= f.collection_select( :postflavor_ids,
+    <%= f.collection_select( :flavor_ids,
       Flavor.all,
-      :id, :name, {selected: @ingredient.postFlavor_ids, include_blank: false}, {multiple: true}) %>
+      :id, :name, {selected: @ingredient.flavor_ids, include_blank: false}, {multiple: true}) %>
   </div>
   <div class="field">
     <%= f.label :Properties %><br>
