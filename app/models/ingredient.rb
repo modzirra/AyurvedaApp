@@ -1,6 +1,5 @@
 class Ingredient < ActiveRecord::Base
-	has_one :food_group
-	has_one :temperature
+	belongs_to :temperature
 
 	has_many :ingredient_pre_flavors
 	has_many :pre_flavors, through: :ingredient_pre_flavors, source: :flavor
