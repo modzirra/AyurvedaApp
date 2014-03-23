@@ -38,6 +38,7 @@ end
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
+	gem 'quiet_assets'
 end
 group :test, :development do
 	# Use sqlite3 as the database for Active Record
