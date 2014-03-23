@@ -11,7 +11,8 @@
         <div id="wrapper">
           <ul>
             <li class="navigation">
-              <h3><%= link_to "Ingredients", ingredients_path %><h3>
+              <!--<h3><%= link_to #"Ingredients", ingredients_path %><h3>-->
+              <h3><a href='<%= ingredients_path %>' rel='self' type='link' target='new'>Ingredients</a></h3>
             </li>
             <li class="navigation">
               <h3><a href='<%= food_groups_path %>' rel='self' type='link' target='new'>Food Groups</a></h3>
