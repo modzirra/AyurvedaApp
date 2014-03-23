@@ -24,13 +24,13 @@
         <td><%= ingredient.Type %></td>
         <td><%= ingredient.Temperature %></td>
         <td>
-          <% ingredient.flavors.each do |flavor| %>
-            <%= flavor.name %>&nbsp;
+          <% ingredient.pre_flavors.each do |pre_flavor| %>
+            <%= pre_flavor.name %>&nbsp;
             <% end %>
         </td>
         <td>
-          <% ingredient.flavors.each do |flavor| %>
-            <%= flavor.name %>&nbsp;
+          <% ingredient.post_flavors.each do |post_flavor| %>
+            <%= post_flavor.name %>&nbsp;
           <% end %>
         </td>
         <td><%= ingredient.Dosha_Action %></td>

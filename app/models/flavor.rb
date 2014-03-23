@@ -1,7 +1,4 @@
 class Flavor < ActiveRecord::Base
-	has_many :preFlavors
-	has_many :ingredients, through: :preFlavors
-	
-	has_many :postFlavors
-	has_many :ingredients, through: :postFlavors
+	has_many :ingredient_post_flavors
+	has_many :ingredient_pre_flavors
 end
