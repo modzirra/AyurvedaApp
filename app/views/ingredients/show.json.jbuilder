@@ -1,1 +1,1 @@
-json.extract! @ingredient, :id, :Name, :FoodGroup, :Temperature, :PreFlavor, :PostFlavor, :Property, :Dosha_Action, :created_at, :updated_at
+json.extract! @ingredient, :id, :Name, :FoodGroup, :Temperature, :PreFlavor, :PostFlavor, :Property, :DoshaAction, :created_at, :updated_at
