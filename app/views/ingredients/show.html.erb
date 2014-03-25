@@ -43,7 +43,9 @@
 </p>
 <p>
   <strong>Dosha action:</strong>
-  <%= @ingredient.Dosha_Action %>
+  <% @ingredient.dosha_actions.each do |dosha_action| %>
+  <%= dosha_action.Dosha %>&nbsp;<%= dosha_action.Movement %><br />
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |

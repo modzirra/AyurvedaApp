@@ -1,3 +1,4 @@
 class DoshaAction < ActiveRecord::Base
-	belongs_to :ingredient
+	has_many :ingredients_dosha_actions
+	has_many :ingredients, through: :ingredient_dosha_action
 end

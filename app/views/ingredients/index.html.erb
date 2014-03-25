@@ -33,7 +33,11 @@
             <%= post_flavor.name %>&nbsp;
           <% end %>
         </td>
-        <td><%= ingredient.Dosha_Action %></td>
+        <td>
+          <% ingredient.dosha_actions.each do |dosha_action| %>
+            <%= dosha_action.Dosha + ' ' + dosha_action.Movement %><br />
+            <% end %>
+        </td>
         <td>
           <% ingredient.properties.each do |property| %>
             <%= property.Name %>&nbsp;

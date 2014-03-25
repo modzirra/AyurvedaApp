@@ -1,4 +1,5 @@
 class Ingredient < ActiveRecord::Base
+	#TEMPERATURES = ['Heating', 'Cooling']
 	belongs_to :temperature
 	belongs_to :food_group
 
@@ -8,10 +9,11 @@ class Ingredient < ActiveRecord::Base
 	has_many :ingredient_post_flavors
 	has_many :post_flavors, through: :ingredient_post_flavors, source: :flavor
 
-	has_many :ingredientProperties
-	has_many :properties, through: :ingredientProperties
+	has_many :ingredient_properties
+	has_many :properties, through: :ingredient_properties
 
-	has_many :dosha_actions
+	has_many :ingredient_dosha_actions
+	has_many :dosha_actions, through: :ingredient_dosha_actions
 
 	scope :heating, -> do
 		where(temperature: 'Heating')

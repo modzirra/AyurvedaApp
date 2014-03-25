@@ -49,7 +49,9 @@
   </div>
   <div class="field">
     <%= f.label :Dosha_Action %><br>
-    <%= f.text_field :Dosha_Action %>
+    <%= f.collection_select( :dosha_action_ids,
+      DoshaAction.all,
+      :id, :Dosha, {selected: @ingredient.dosha_action_ids, include_blank: false}, {multiple: true}) %>
   </div>
   <div class="actions">
     <%= f.submit %>
