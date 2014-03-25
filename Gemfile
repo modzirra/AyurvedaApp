@@ -31,6 +31,7 @@ group :doc do
 end
 
 group :production do
+	#for heroku
   gem 'pg'
   gem 'rails_12factor'
 end
