@@ -23,7 +23,7 @@
   </div>
   <div class="field">
     <%= f.label :Temperature %><br>
-    <%= f.collection_select( :temperature_ids,
+    <%= f.collection_select( :temperature_id,
       Temperature.all,
       :id, :Type, {selected: @ingredient.temperature_id, include_blank: false}, {multiple: false}) %>
   </div>

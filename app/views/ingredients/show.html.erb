@@ -18,7 +18,7 @@
 
 <p>
   <strong>Temperature:</strong>
-  <%= @ingredient.temperature %>
+  <%= @ingredient.temperature.try(:Type) %>
 </p>
 
 <p>
