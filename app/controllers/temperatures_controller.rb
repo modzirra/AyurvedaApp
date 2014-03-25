@@ -1,5 +1,5 @@
 class TemperaturesController < ApplicationController
-  before_action :set_temperature, only: [:show, :edit, :update, :destroy]
+  before_action :set_temperature, only: [:show]
 
   # GET /temperatures
   # GET /temperatures.json
@@ -14,7 +14,6 @@ class TemperaturesController < ApplicationController
 
   # GET /temperatures/new
   def new
-    @temperature = Temperature.new
   end
 
   # GET /temperatures/1/edit
@@ -24,41 +23,16 @@ class TemperaturesController < ApplicationController
   # POST /temperatures
   # POST /temperatures.json
   def create
-    @temperature = Temperature.new(temperature_params)
-
-    respond_to do |format|
-      if @temperature.save
-        format.html { redirect_to @temperature, notice: 'Temperature was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @temperature }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @temperature.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /temperatures/1
   # PATCH/PUT /temperatures/1.json
   def update
-    respond_to do |format|
-      if @temperature.update(temperature_params)
-        format.html { redirect_to @temperature, notice: 'Temperature was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @temperature.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # DELETE /temperatures/1
   # DELETE /temperatures/1.json
   def destroy
-    @temperature.destroy
-    respond_to do |format|
-      format.html { redirect_to temperatures_url }
-      format.json { head :no_content }
-    end
   end
 
   private
