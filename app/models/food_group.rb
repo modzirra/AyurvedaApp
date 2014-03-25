@@ -1,3 +1,3 @@
 class FoodGroup < ActiveRecord::Base
-	belongs_to :ingredient
+	has_many :ingredients
 end

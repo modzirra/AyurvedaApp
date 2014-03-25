@@ -12,8 +12,8 @@
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @ingredient.Type %>
+  <strong>Food Group:</strong>
+  <%= @ingredient.food_group.try(:Name) %>
 </p>
 
 <p>
