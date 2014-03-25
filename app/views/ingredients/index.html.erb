@@ -21,7 +21,7 @@
     <% @ingredients.each do |ingredient| %>
       <tr>
         <td><%= ingredient.Name %></td>
-        <td><%= ingredient.food_group.try(:Name) %></td>
+        <td><%= ingredient.food_group.try(:name) %></td>
         <td><%= ingredient.temperature.try(:Type) %></td>
         <td>
           <% ingredient.pre_flavors.each do |pre_flavor| %>

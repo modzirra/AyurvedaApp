@@ -1,5 +1,5 @@
 class FoodGroup < ActiveRecord::Base
 	has_many :ingredients
 
-	default_scope order('Name')
+	default_scope order('name')
 end

@@ -21,7 +21,7 @@
     <%= f.label :FoodGroup %><br>
     <%= f.collection_select( :food_group_id,
       FoodGroup.all,
-      :id, :Name, {selected: @ingredient.food_group_id, include_blank:false}, {multiple: false}) %>
+      :id, :name, {selected: @ingredient.food_group_id, include_blank:false}, {multiple: false}) %>
   </div>
   <div class="field">
     <%= f.label :Temperature %><br>
