@@ -69,6 +69,6 @@ class DoshaActionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dosha_action_params
-      params.require(:dosha_action).permit(:Dosha, :Movement)
+      params.require(:dosha_action).permit(:Dosha)
     end
 end
